@@ -13,6 +13,7 @@
 		EED8F3F8289290DA00A47F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F3F7289290DA00A47F3F /* Assets.xcassets */; };
 		EED8F3FB289290DA00A47F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED8F3F9289290DA00A47F3F /* LaunchScreen.storyboard */; };
 		EED8F3FE289290DA00A47F3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3FD289290DA00A47F3F /* main.m */; };
+		EED8F4062892BDEB00A47F3F /* UIView+plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F4052892BDEB00A47F3F /* UIView+plugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		EED8F3FA289290DA00A47F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EED8F3FC289290DA00A47F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EED8F3FD289290DA00A47F3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EED8F4042892BDEB00A47F3F /* UIView+plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+plugin.h"; sourceTree = "<group>"; };
+		EED8F4052892BDEB00A47F3F /* UIView+plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+plugin.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				EED8F3F9289290DA00A47F3F /* LaunchScreen.storyboard */,
 				EED8F3FC289290DA00A47F3F /* Info.plist */,
 				EED8F3FD289290DA00A47F3F /* main.m */,
+				EED8F4042892BDEB00A47F3F /* UIView+plugin.h */,
+				EED8F4052892BDEB00A47F3F /* UIView+plugin.m */,
 			);
 			path = demoApp;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED8F3F3289290D900A47F3F /* ViewController.m in Sources */,
+				EED8F4062892BDEB00A47F3F /* UIView+plugin.m in Sources */,
 				EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */,
 				EED8F3FE289290DA00A47F3F /* main.m in Sources */,
 				EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */,

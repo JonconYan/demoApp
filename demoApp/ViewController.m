@@ -6,8 +6,11 @@
 //
 
 #import "ViewController.h"
+#import "UIView+plugin.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -15,8 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-    // Do any additional setup after loading the view.
+    self.title = @"demoApp";
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.height + [self getStatusBarHeight], self.view.width, self.view.height)];
+    [self.view addSubview:self.tableView];
+}
+
+- (CGFloat)getStatusBarHeight {
+    NSSet *set = [[UIApplication sharedApplication] connectedScenes];
+    UIWindowScene *windowScene = [set anyObject];
+    return windowScene.statusBarManager.statusBarFrame.size.height;
 }
 
 
