@@ -14,6 +14,7 @@
 		EED8F3FB289290DA00A47F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED8F3F9289290DA00A47F3F /* LaunchScreen.storyboard */; };
 		EED8F3FE289290DA00A47F3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3FD289290DA00A47F3F /* main.m */; };
 		EED8F4062892BDEB00A47F3F /* UIView+plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F4052892BDEB00A47F3F /* UIView+plugin.m */; };
+		EED8F40A2893BD5F00A47F3F /* HorizontalCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		EED8F3FD289290DA00A47F3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EED8F4042892BDEB00A47F3F /* UIView+plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+plugin.h"; sourceTree = "<group>"; };
 		EED8F4052892BDEB00A47F3F /* UIView+plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+plugin.m"; sourceTree = "<group>"; };
+		EED8F4082893BD5F00A47F3F /* HorizontalCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewController.h; sourceTree = "<group>"; };
+		EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 		EED8F3EA289290D900A47F3F /* demoApp */ = {
 			isa = PBXGroup;
 			children = (
+				EED8F407289387F600A47F3F /* listControllers */,
 				EED8F3EB289290D900A47F3F /* AppDelegate.h */,
 				EED8F3EC289290D900A47F3F /* AppDelegate.m */,
 				EED8F3EE289290D900A47F3F /* SceneDelegate.h */,
@@ -76,6 +80,15 @@
 				EED8F4052892BDEB00A47F3F /* UIView+plugin.m */,
 			);
 			path = demoApp;
+			sourceTree = "<group>";
+		};
+		EED8F407289387F600A47F3F /* listControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F4082893BD5F00A47F3F /* HorizontalCollectionViewController.h */,
+				EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */,
+			);
+			path = listControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED8F40A2893BD5F00A47F3F /* HorizontalCollectionViewController.m in Sources */,
 				EED8F3F3289290D900A47F3F /* ViewController.m in Sources */,
 				EED8F4062892BDEB00A47F3F /* UIView+plugin.m in Sources */,
 				EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */,
