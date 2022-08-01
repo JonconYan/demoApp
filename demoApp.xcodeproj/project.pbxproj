@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE19652E2897B35C00595356 /* HorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */; };
 		EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EC289290D900A47F3F /* AppDelegate.m */; };
 		EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EF289290D900A47F3F /* SceneDelegate.m */; };
 		EED8F3F3289290D900A47F3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3F2289290D900A47F3F /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE19652C2897B35C00595356 /* HorizontalCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewLayout.h; sourceTree = "<group>"; };
+		EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
 		EED8F3E8289290D900A47F3F /* demoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED8F3EB289290D900A47F3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EED8F3EC289290D900A47F3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 			children = (
 				EED8F4082893BD5F00A47F3F /* HorizontalCollectionViewController.h */,
 				EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */,
+				EE19652C2897B35C00595356 /* HorizontalCollectionViewLayout.h */,
+				EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */,
 			);
 			path = listControllers;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */,
 				EED8F3FE289290DA00A47F3F /* main.m in Sources */,
 				EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */,
+				EE19652E2897B35C00595356 /* HorizontalCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
