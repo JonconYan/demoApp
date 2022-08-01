@@ -5,9 +5,9 @@
 //  Created by xiaokangyan on 2022/7/28.
 //
 
-#import "UIView+plugin.h"
+#import "UIView+Plugin.h"
 
-@implementation UIView (plugin)
+@implementation UIView (Plugin)
 
 - (CGFloat)width {
     return self.frame.size.width;

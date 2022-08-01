@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "UIView+plugin.h"
+#import "UIView+Plugin.h"
 #import "HorizontalCollectionViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>

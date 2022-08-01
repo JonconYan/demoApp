@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+plugin.h"
+#import "UIView+Plugin.h"
 
 @interface HorizontalCollectionViewController : UIViewController
 

@@ -6,7 +6,7 @@
 //
 
 #import "HorizontalCollectionViewLayout.h"
-#import "UIView+plugin.h"
+#import "UIView+Plugin.h"
 
 @interface HorizontalCollectionViewLayout ()
 
@@ -18,9 +18,14 @@
 
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
-    if (proposedContentOffset.x - _lastContentOffset.x > 0 && _currentIndex < self.maxItemCount - 1) {
+    if (!_haveScrollHalfWidth) {
+        return _lastContentOffset;
+    }
+    _haveScrollHalfWidth = NO;
+    CGFloat deltaOffset = fabs(proposedContentOffset.x - _lastContentOffset.x);
+    if (velocity.x > 0 && _currentIndex < self.maxItemCount - 1 && deltaOffset > self.itemWidth / 2) {
         _currentIndex++;
-    } else if (proposedContentOffset.x - _lastContentOffset.x < 0 && _currentIndex) {
+    } else if (velocity.x < 0 && _currentIndex && deltaOffset > self.itemWidth / 2) {
         _currentIndex--;
     }
     _lastContentOffset = CGPointMake((self.itemWidth + self.minimumLineSpacing) * _currentIndex, proposedContentOffset.y);

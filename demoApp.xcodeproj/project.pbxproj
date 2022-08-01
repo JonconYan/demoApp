@@ -8,19 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		EE19652E2897B35C00595356 /* HorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */; };
+		EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19654E2897FE7A00595356 /* UIColor+Plugin.m */; };
 		EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EC289290D900A47F3F /* AppDelegate.m */; };
 		EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EF289290D900A47F3F /* SceneDelegate.m */; };
 		EED8F3F3289290D900A47F3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3F2289290D900A47F3F /* ViewController.m */; };
 		EED8F3F8289290DA00A47F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F3F7289290DA00A47F3F /* Assets.xcassets */; };
 		EED8F3FB289290DA00A47F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED8F3F9289290DA00A47F3F /* LaunchScreen.storyboard */; };
 		EED8F3FE289290DA00A47F3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3FD289290DA00A47F3F /* main.m */; };
-		EED8F4062892BDEB00A47F3F /* UIView+plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F4052892BDEB00A47F3F /* UIView+plugin.m */; };
+		EED8F4062892BDEB00A47F3F /* UIView+Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F4052892BDEB00A47F3F /* UIView+Plugin.m */; };
 		EED8F40A2893BD5F00A47F3F /* HorizontalCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE19652C2897B35C00595356 /* HorizontalCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewLayout.h; sourceTree = "<group>"; };
 		EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
+		EE19654D2897FE7A00595356 /* UIColor+Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Plugin.h"; sourceTree = "<group>"; };
+		EE19654E2897FE7A00595356 /* UIColor+Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Plugin.m"; sourceTree = "<group>"; };
 		EED8F3E8289290D900A47F3F /* demoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED8F3EB289290D900A47F3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EED8F3EC289290D900A47F3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,8 +35,8 @@
 		EED8F3FA289290DA00A47F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EED8F3FC289290DA00A47F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EED8F3FD289290DA00A47F3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EED8F4042892BDEB00A47F3F /* UIView+plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+plugin.h"; sourceTree = "<group>"; };
-		EED8F4052892BDEB00A47F3F /* UIView+plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+plugin.m"; sourceTree = "<group>"; };
+		EED8F4042892BDEB00A47F3F /* UIView+Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Plugin.h"; sourceTree = "<group>"; };
+		EED8F4052892BDEB00A47F3F /* UIView+Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Plugin.m"; sourceTree = "<group>"; };
 		EED8F4082893BD5F00A47F3F /* HorizontalCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewController.h; sourceTree = "<group>"; };
 		EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,8 +82,10 @@
 				EED8F3F9289290DA00A47F3F /* LaunchScreen.storyboard */,
 				EED8F3FC289290DA00A47F3F /* Info.plist */,
 				EED8F3FD289290DA00A47F3F /* main.m */,
-				EED8F4042892BDEB00A47F3F /* UIView+plugin.h */,
-				EED8F4052892BDEB00A47F3F /* UIView+plugin.m */,
+				EED8F4042892BDEB00A47F3F /* UIView+Plugin.h */,
+				EED8F4052892BDEB00A47F3F /* UIView+Plugin.m */,
+				EE19654D2897FE7A00595356 /* UIColor+Plugin.h */,
+				EE19654E2897FE7A00595356 /* UIColor+Plugin.m */,
 			);
 			path = demoApp;
 			sourceTree = "<group>";
@@ -167,7 +172,8 @@
 			files = (
 				EED8F40A2893BD5F00A47F3F /* HorizontalCollectionViewController.m in Sources */,
 				EED8F3F3289290D900A47F3F /* ViewController.m in Sources */,
-				EED8F4062892BDEB00A47F3F /* UIView+plugin.m in Sources */,
+				EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */,
+				EED8F4062892BDEB00A47F3F /* UIView+Plugin.m in Sources */,
 				EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */,
 				EED8F3FE289290DA00A47F3F /* main.m in Sources */,
 				EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */,

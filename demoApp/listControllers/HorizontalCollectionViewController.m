@@ -7,11 +7,12 @@
 
 #import "HorizontalCollectionViewController.h"
 #import "HorizontalCollectionViewLayout.h"
+#import "UIColor+Plugin.h"
 #import <UIKit/UIKit.h>
 
-#define CELL_INSERT 10
+#define CELL_INSERT 8
 //左右露出的距离
-#define CELL_EDGE_INSERT 5
+#define CELL_EDGE_INSERT 12
 
 @interface HorizontalCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -34,7 +35,7 @@
     if (!_backgroundView) {
         _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 200)];
         _backgroundView.center = CGPointMake(self.view.width/2, self.view.height/2);
-        _backgroundView.backgroundColor = [UIColor redColor];
+        _backgroundView.backgroundColor = [UIColor systemPinkColor];
     }
     return _backgroundView;
 }
@@ -56,6 +57,7 @@
         _collectionView.clipsToBounds = NO;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
         layout.itemWidth = _collectionView.width - CELL_INSERT * 2 - CELL_EDGE_INSERT * 2;
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
         if (@available(iOS 11.0, *)) {
@@ -73,7 +75,7 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor greenColor];
+    cell.backgroundColor = [UIColor colorWithRGBHex:0xf5f6fa];
     cell.layer.cornerRadius = 10;
     return cell;
 }
@@ -82,6 +84,10 @@
                     layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(collectionView.width - CELL_INSERT * 2 - CELL_EDGE_INSERT * 2, collectionView.height);
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    NSLog(@"up");
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  UIView+plugin.h
+//  UIView+Plugin.h
 //  demoApp
 //
 //  Created by xiaokangyan on 2022/7/28.
@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (plugin)
+@interface UIView (Plugin)
 
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
