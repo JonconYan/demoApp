@@ -13,11 +13,49 @@
 #define CELL_INSERT 8
 //左右露出的距离
 #define CELL_EDGE_INSERT 12
+#define START_INDEX 4
+
+@interface DisplayCell : UICollectionViewCell
+
+@property (nonatomic, strong) UILabel *label;
+
+@end
+
+@implementation DisplayCell
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        _label = [[UILabel alloc] initWithFrame:CGRectZero];
+        _label.font = [UIFont boldSystemFontOfSize:50];
+        _label.textColor = [UIColor blackColor];
+        [self.contentView addSubview:_label];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self.label sizeToFit];
+    self.label.center = CGPointMake(self.contentView.width / 2, self.contentView.height / 2);
+}
+
+- (void)setText:(NSString *)text {
+    _label.text = text;
+    [self setNeedsLayout];
+}
+
+@end
 
 @interface HorizontalCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
+//view
 @property (nonatomic, strong) UIView *backgroundView;
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) HorizontalCollectionViewLayout *layout;
+
+//model
+@property (nonatomic, copy) NSArray<NSString *> *modelArray;
 
 @end
 
@@ -25,6 +63,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //model
+    NSMutableArray<NSString *> *tempArr = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < 10; i++) {
+        NSString *str = [NSString stringWithFormat:@"%ld", i];
+        [tempArr addObject:str];
+    }
+    self.modelArray = [tempArr copy];
+    
+    //view
     [self.view addSubview:self.backgroundView];
     [self.backgroundView addSubview:self.collectionView];
 }
@@ -43,51 +90,66 @@
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         CGFloat marginTop = 20;
-        HorizontalCollectionViewLayout *layout = [[HorizontalCollectionViewLayout alloc] init];
-        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        layout.minimumLineSpacing = CELL_INSERT;
-        layout.maxItemCount = 10;
-        layout.sectionInset = UIEdgeInsetsMake(0, CELL_INSERT + CELL_EDGE_INSERT, 0, CELL_INSERT + CELL_EDGE_INSERT);
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, marginTop, self.backgroundView.width, self.backgroundView.height - marginTop * 2) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, marginTop, self.backgroundView.width, self.backgroundView.height - marginTop * 2) collectionViewLayout:self.layout];
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.allowsMultipleSelection = NO;
         _collectionView.delaysContentTouches = NO;
-        _collectionView.clipsToBounds = NO;
+        _collectionView.clipsToBounds = YES;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
-        layout.itemWidth = _collectionView.width - CELL_INSERT * 2 - CELL_EDGE_INSERT * 2;
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+        [_collectionView registerClass:[DisplayCell class] forCellWithReuseIdentifier:@"DisplayCell"];
         if (@available(iOS 11.0, *)) {
             _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
+        _collectionView.contentOffset = CGPointMake([self getOffsetWithIndex:START_INDEX], 0);
     }
     return _collectionView;
+}
+
+- (HorizontalCollectionViewLayout *)layout {
+    if (!_layout) {
+        _layout = [[HorizontalCollectionViewLayout alloc] init];
+        _layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        _layout.minimumLineSpacing = CELL_INSERT;
+        _layout.maxItemCount = self.modelArray.count;
+        _layout.sectionInset = UIEdgeInsetsMake(0, CELL_INSERT + CELL_EDGE_INSERT, 0, CELL_INSERT + CELL_EDGE_INSERT);
+        _layout.currentIndex = START_INDEX;
+        _layout.itemWidth = [self cellItemWidth];
+    }
+    return _layout;
+}
+
+#pragma mark - UI相关
+
+- (CGFloat)cellItemWidth {
+    return self.collectionView.width - CELL_INSERT * 2 - CELL_EDGE_INSERT * 2;
+}
+
+- (CGFloat)getOffsetWithIndex:(NSInteger)index {
+    return ([self cellItemWidth] + self.layout.minimumLineSpacing) * index;
 }
 
 #pragma mark - delegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.modelArray.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    DisplayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DisplayCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRGBHex:0xf5f6fa];
     cell.layer.cornerRadius = 10;
+    [cell setText:self.modelArray[indexPath.row]];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
                     layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(collectionView.width - CELL_INSERT * 2 - CELL_EDGE_INSERT * 2, collectionView.height);
-}
-
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    NSLog(@"up");
+    return CGSizeMake([self cellItemWidth], collectionView.height);
 }
 
 @end
