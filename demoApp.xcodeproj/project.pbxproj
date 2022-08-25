@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE19652E2897B35C00595356 /* HorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */; };
 		EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19654E2897FE7A00595356 /* UIColor+Plugin.m */; };
+		EEAD91F928B777B0004874D4 /* PromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD91F828B777B0004874D4 /* PromiseViewController.m */; };
 		EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EC289290D900A47F3F /* AppDelegate.m */; };
 		EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EF289290D900A47F3F /* SceneDelegate.m */; };
 		EED8F3F3289290D900A47F3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3F2289290D900A47F3F /* ViewController.m */; };
@@ -24,6 +25,8 @@
 		EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
 		EE19654D2897FE7A00595356 /* UIColor+Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Plugin.h"; sourceTree = "<group>"; };
 		EE19654E2897FE7A00595356 /* UIColor+Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Plugin.m"; sourceTree = "<group>"; };
+		EEAD91F728B777B0004874D4 /* PromiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromiseViewController.h; sourceTree = "<group>"; };
+		EEAD91F828B777B0004874D4 /* PromiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromiseViewController.m; sourceTree = "<group>"; };
 		EED8F3E8289290D900A47F3F /* demoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED8F3EB289290D900A47F3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EED8F3EC289290D900A47F3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */,
 				EE19652C2897B35C00595356 /* HorizontalCollectionViewLayout.h */,
 				EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */,
+				EEAD91F728B777B0004874D4 /* PromiseViewController.h */,
+				EEAD91F828B777B0004874D4 /* PromiseViewController.m */,
 			);
 			path = listControllers;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */,
 				EED8F4062892BDEB00A47F3F /* UIView+Plugin.m in Sources */,
 				EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */,
+				EEAD91F928B777B0004874D4 /* PromiseViewController.m in Sources */,
 				EED8F3FE289290DA00A47F3F /* main.m in Sources */,
 				EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */,
 				EE19652E2897B35C00595356 /* HorizontalCollectionViewLayout.m in Sources */,

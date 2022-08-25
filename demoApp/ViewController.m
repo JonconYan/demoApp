@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "UIView+Plugin.h"
 #import "HorizontalCollectionViewController.h"
+#import "PromiseViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -45,7 +46,8 @@
 - (NSDictionary *)dict {
     if (!_dict) {
         _dict = @{
-            @"横向collectionView" : [HorizontalCollectionViewController class]
+            @"横向collectionView" : [HorizontalCollectionViewController class],
+            @"Promise测试" : [PromiseViewController class]
         };
     }
     return _dict;
