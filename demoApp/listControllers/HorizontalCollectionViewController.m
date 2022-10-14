@@ -47,12 +47,13 @@
 
 @end
 
-@interface HorizontalCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface HorizontalCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 
 //view
 @property (nonatomic, strong) UIView *backgroundView;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) HorizontalCollectionViewLayout *layout;
+@property (nonatomic, strong) UIButton *pickerBtn;
 
 //model
 @property (nonatomic, copy) NSArray<NSString *> *modelArray;
@@ -73,7 +74,19 @@
     
     //view
     [self.view addSubview:self.backgroundView];
+    [self.view addSubview:self.pickerBtn];
     [self.backgroundView addSubview:self.collectionView];
+    
+    
+}
+
+#pragma mark - event
+
+- (void)pickerBtnDidTapped {
+    UIPickerView* pickerView = [[UIPickerView alloc] initWithFrame:self.view.frame];
+    pickerView.delegate = self;
+    pickerView.dataSource = self;
+    [self.view addSubview:pickerView];
 }
 
 #pragma mark - getter
@@ -109,6 +122,17 @@
     return _collectionView;
 }
 
+- (UIButton *)pickerBtn {
+    if (!_pickerBtn) {
+        _pickerBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+        [_pickerBtn setTitle:@"选择器" forState:UIControlStateNormal];
+        _pickerBtn.backgroundColor = [UIColor redColor];
+        [_pickerBtn addTarget:self action:@selector(pickerBtnDidTapped) forControlEvents:UIControlEventTouchUpInside];
+        _pickerBtn.center = CGPointMake(self.view.center.x, self.backgroundView.top - 100);
+    }
+    return _pickerBtn;
+}
+
 - (HorizontalCollectionViewLayout *)layout {
     if (!_layout) {
         _layout = [[HorizontalCollectionViewLayout alloc] init];
@@ -132,7 +156,7 @@
     return ([self cellItemWidth] + self.layout.minimumLineSpacing) * index;
 }
 
-#pragma mark - delegate
+#pragma mark - collectionView delegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.modelArray.count;
@@ -150,6 +174,27 @@
                     layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake([self cellItemWidth], collectionView.height);
+}
+
+#pragma mark - pickerView delegate
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return 30;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    return 46;
+}
+
+- (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return @"test";
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    NSLog(@"");
 }
 
 @end
