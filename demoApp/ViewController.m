@@ -10,6 +10,7 @@
 #import "HorizontalCollectionViewController.h"
 #import "PromiseViewController.h"
 #import "demoApp-swift.h"
+#import "TranstionDemoViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -49,7 +50,8 @@
         _dict = @{
             @"横向collectionView" : [HorizontalCollectionViewController class],
             @"Promise测试" : [PromiseViewController class],
-            @"swift页面" : [SwiftVC class]
+            @"swift页面" : [SwiftVC class],
+            @"转场demo" : [TranstionDemoViewController class]
         };
     }
     return _dict;

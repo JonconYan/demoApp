@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		EE19652E2897B35C00595356 /* HorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */; };
 		EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19654E2897FE7A00595356 /* UIColor+Plugin.m */; };
+		EE5B7CA0290BDCC70093D9DA /* TranstionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5B7C9F290BDCC70093D9DA /* TranstionDemoViewController.m */; };
+		EE5B7CA3290BDD790093D9DA /* TranstionBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5B7CA2290BDD790093D9DA /* TranstionBaseViewController.m */; };
+		EE7592B428B7A148003BCD87 /* SwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7592B328B7A148003BCD87 /* SwiftVC.swift */; };
 		EEAD91F928B777B0004874D4 /* PromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD91F828B777B0004874D4 /* PromiseViewController.m */; };
 		EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EC289290D900A47F3F /* AppDelegate.m */; };
 		EED8F3F0289290D900A47F3F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F3EF289290D900A47F3F /* SceneDelegate.m */; };
@@ -25,6 +28,12 @@
 		EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
 		EE19654D2897FE7A00595356 /* UIColor+Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Plugin.h"; sourceTree = "<group>"; };
 		EE19654E2897FE7A00595356 /* UIColor+Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Plugin.m"; sourceTree = "<group>"; };
+		EE5B7C9E290BDCC70093D9DA /* TranstionDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranstionDemoViewController.h; sourceTree = "<group>"; };
+		EE5B7C9F290BDCC70093D9DA /* TranstionDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TranstionDemoViewController.m; sourceTree = "<group>"; };
+		EE5B7CA1290BDD790093D9DA /* TranstionBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranstionBaseViewController.h; sourceTree = "<group>"; };
+		EE5B7CA2290BDD790093D9DA /* TranstionBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TranstionBaseViewController.m; sourceTree = "<group>"; };
+		EE7592B228B7A148003BCD87 /* demoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "demoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE7592B328B7A148003BCD87 /* SwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVC.swift; sourceTree = "<group>"; };
 		EEAD91F728B777B0004874D4 /* PromiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromiseViewController.h; sourceTree = "<group>"; };
 		EEAD91F828B777B0004874D4 /* PromiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromiseViewController.m; sourceTree = "<group>"; };
 		EED8F3E8289290D900A47F3F /* demoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +64,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE5B7C9D290BDC850093D9DA /* Transtion */ = {
+			isa = PBXGroup;
+			children = (
+				EE5B7C9E290BDCC70093D9DA /* TranstionDemoViewController.h */,
+				EE5B7C9F290BDCC70093D9DA /* TranstionDemoViewController.m */,
+				EE5B7CA1290BDD790093D9DA /* TranstionBaseViewController.h */,
+				EE5B7CA2290BDD790093D9DA /* TranstionBaseViewController.m */,
+			);
+			path = Transtion;
+			sourceTree = "<group>";
+		};
 		EED8F3DF289290D900A47F3F = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +116,15 @@
 		EED8F407289387F600A47F3F /* listControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE5B7C9D290BDC850093D9DA /* Transtion */,
 				EED8F4082893BD5F00A47F3F /* HorizontalCollectionViewController.h */,
 				EED8F4092893BD5F00A47F3F /* HorizontalCollectionViewController.m */,
 				EE19652C2897B35C00595356 /* HorizontalCollectionViewLayout.h */,
 				EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */,
 				EEAD91F728B777B0004874D4 /* PromiseViewController.h */,
 				EEAD91F828B777B0004874D4 /* PromiseViewController.m */,
+				EE7592B328B7A148003BCD87 /* SwiftVC.swift */,
+				EE7592B228B7A148003BCD87 /* demoApp-Bridging-Header.h */,
 			);
 			path = listControllers;
 			sourceTree = "<group>";
@@ -175,10 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5B7CA3290BDD790093D9DA /* TranstionBaseViewController.m in Sources */,
+				EE7592B428B7A148003BCD87 /* SwiftVC.swift in Sources */,
 				EED8F40A2893BD5F00A47F3F /* HorizontalCollectionViewController.m in Sources */,
 				EED8F3F3289290D900A47F3F /* ViewController.m in Sources */,
 				EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */,
 				EED8F4062892BDEB00A47F3F /* UIView+Plugin.m in Sources */,
+				EE5B7CA0290BDCC70093D9DA /* TranstionDemoViewController.m in Sources */,
 				EED8F3ED289290D900A47F3F /* AppDelegate.m in Sources */,
 				EEAD91F928B777B0004874D4 /* PromiseViewController.m in Sources */,
 				EED8F3FE289290DA00A47F3F /* main.m in Sources */,

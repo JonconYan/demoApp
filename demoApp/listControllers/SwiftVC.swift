@@ -54,6 +54,7 @@ class SwiftVC : UIViewController,UITableViewDelegate,UITableViewDataSource {
             super.layoutSubviews()
             cellLabel.frame = self.bounds;
         }
+        //表示可能返回nil
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
