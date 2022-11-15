@@ -19,8 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[self test1] then:^id _Nullable(id  _Nullable value) {
+    [[[self test1] then:^id _Nullable(id  _Nullable value) {
         NSLog(@"test");
+        return @1;
+    }] then:^id _Nullable(id  _Nullable value) {
+        NSLog(@"test1");
         return @1;
     }];
 }

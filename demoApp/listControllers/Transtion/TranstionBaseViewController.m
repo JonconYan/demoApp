@@ -16,7 +16,7 @@
 #pragma mark - UIViewControllerAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
-    return 3;
+    return 1;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
@@ -27,10 +27,11 @@
     toVC.view.alpha = 0;
     UIView* containerView = [transitionContext containerView];
     [containerView addSubview:toVC.view];
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:.3f animations:^{
         toVC.view.alpha = 1;
     } completion:^(BOOL finished) {
         NSLog(@"Transition complete");
+        //不写这句话会导致导航栏控件失效
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 }

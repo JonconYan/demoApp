@@ -1,0 +1,10 @@
+Pods
+demoApp.xcworkspace/contents.xcworkspacedata
+demoApp.xcodeproj/xcuserdata/
+demoApp.xcworkspace/contents.xcworkspacedata
+demoApp.xcodeproj/project.xcworkspace/xcuserdata
+*.xcuserstate
+**/xcuserdata/**
+**/*.xcuserdatad/**
+**/xcshareddata/
+**/xcschememanagement.plist
