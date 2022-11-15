@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE19652E2897B35C00595356 /* HorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */; };
 		EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EE19654E2897FE7A00595356 /* UIColor+Plugin.m */; };
+		EE4191D32923C47A0041D729 /* GestureTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4191D22923C47A0041D729 /* GestureTestViewController.m */; };
 		EE5B7CA0290BDCC70093D9DA /* TranstionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5B7C9F290BDCC70093D9DA /* TranstionDemoViewController.m */; };
 		EE5B7CA3290BDD790093D9DA /* TranstionBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5B7CA2290BDD790093D9DA /* TranstionBaseViewController.m */; };
 		EE7592B428B7A148003BCD87 /* SwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7592B328B7A148003BCD87 /* SwiftVC.swift */; };
@@ -28,6 +29,8 @@
 		EE19652D2897B35C00595356 /* HorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
 		EE19654D2897FE7A00595356 /* UIColor+Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Plugin.h"; sourceTree = "<group>"; };
 		EE19654E2897FE7A00595356 /* UIColor+Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Plugin.m"; sourceTree = "<group>"; };
+		EE4191D12923C47A0041D729 /* GestureTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureTestViewController.h; sourceTree = "<group>"; };
+		EE4191D22923C47A0041D729 /* GestureTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureTestViewController.m; sourceTree = "<group>"; };
 		EE5B7C9E290BDCC70093D9DA /* TranstionDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranstionDemoViewController.h; sourceTree = "<group>"; };
 		EE5B7C9F290BDCC70093D9DA /* TranstionDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TranstionDemoViewController.m; sourceTree = "<group>"; };
 		EE5B7CA1290BDD790093D9DA /* TranstionBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranstionBaseViewController.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				EEAD91F828B777B0004874D4 /* PromiseViewController.m */,
 				EE7592B328B7A148003BCD87 /* SwiftVC.swift */,
 				EE7592B228B7A148003BCD87 /* demoApp-Bridging-Header.h */,
+				EE4191D12923C47A0041D729 /* GestureTestViewController.h */,
+				EE4191D22923C47A0041D729 /* GestureTestViewController.m */,
 			);
 			path = listControllers;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				EE7592B428B7A148003BCD87 /* SwiftVC.swift in Sources */,
 				EED8F40A2893BD5F00A47F3F /* HorizontalCollectionViewController.m in Sources */,
 				EED8F3F3289290D900A47F3F /* ViewController.m in Sources */,
+				EE4191D32923C47A0041D729 /* GestureTestViewController.m in Sources */,
 				EE19654F2897FE7A00595356 /* UIColor+Plugin.m in Sources */,
 				EED8F4062892BDEB00A47F3F /* UIView+Plugin.m in Sources */,
 				EE5B7CA0290BDCC70093D9DA /* TranstionDemoViewController.m in Sources */,

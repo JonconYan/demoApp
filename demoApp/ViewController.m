@@ -11,6 +11,7 @@
 #import "PromiseViewController.h"
 #import "demoApp-swift.h"
 #import "TranstionDemoViewController.h"
+#import "GestureTestViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -51,7 +52,8 @@
             @"横向collectionView" : [HorizontalCollectionViewController class],
             @"Promise测试" : [PromiseViewController class],
             @"swift页面" : [SwiftVC class],
-            @"转场demo" : [TranstionDemoViewController class]
+            @"转场demo" : [TranstionDemoViewController class],
+            @"Gesture测试" : [GestureTestViewController class]
         };
     }
     return _dict;
